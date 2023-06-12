@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$(find . -mindepth 1 -maxdepth 1 \( -type d -o -type l -o -type f -o -type p \) -printf x | wc -c)"
+echo "Number of directories: $(find . -mindepth 1 -maxdepth 1 \( -type d -name ".*" -o ! -name ".*" \) | wc -l)"
